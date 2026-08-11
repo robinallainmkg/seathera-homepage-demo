@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEATHERA — Comparatif des chartes couleur</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Jost:wght@300;400;500&family=IBM+Plex+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Jost',sans-serif;font-weight:300;background:#F4F2EC;color:#12222E;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 clamp(20px,4vw,48px)}
+h1,h2,h3{font-family:'Marcellus',serif;font-weight:400;line-height:1.2}
+.mono{font-family:'IBM Plex Mono',monospace;letter-spacing:.24em;text-transform:uppercase;font-size:11px}
+
+.head{padding:70px 0 50px;text-align:center}
+.head .mono{color:#C2A265}
+.head h1{font-size:clamp(30px,4.5vw,46px);margin:16px 0 14px}
+.head p{color:#5C6B76;max-width:560px;margin:0 auto}
+
+.charte{background:#fff;border:1px solid rgba(18,34,46,.08);margin-bottom:34px;overflow:hidden}
+.charte-head{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:26px 30px;border-bottom:1px solid rgba(18,34,46,.08);flex-wrap:wrap}
+.charte-head h2{font-size:26px}
+.charte-head .badge{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;padding:6px 12px;border:1px solid #C2A265;color:#8A6F3C}
+.swatches{display:flex;height:110px}
+.sw{flex:1;display:flex;align-items:flex-end;padding:10px;color:#fff;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.06em}
+.sw.light{color:#12222E}
+.charte-body{display:grid;grid-template-columns:1fr 1fr;gap:0}
+@media(max-width:760px){.charte-body{grid-template-columns:1fr}}
+.mini{padding:30px;min-height:190px;display:flex;flex-direction:column;justify-content:center}
+.mini .mono{font-size:9.5px;margin-bottom:10px;opacity:.85}
+.mini h3{font-size:24px;margin-bottom:8px}
+.mini .btns{display:flex;gap:10px;margin-top:16px}
+.mini .b{font-size:10px;letter-spacing:.2em;text-transform:uppercase;padding:10px 16px;border:1px solid}
+.verdict{padding:26px 30px;border-top:1px solid rgba(18,34,46,.08)}
+.verdict p{font-size:14.5px;color:#43555F;margin-bottom:8px}
+.verdict b{font-weight:500;color:#12222E}
+.verdict .voir{display:inline-block;margin-top:12px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;border-bottom:1px solid #C2A265;padding-bottom:4px;color:#12222E;text-decoration:none}
+.reco{background:#071C2B;color:#F7F3EA;padding:44px;text-align:center;margin:50px 0 70px}
+.reco .mono{color:#D8BE8C}
+.reco h2{font-size:26px;margin:14px 0 12px}
+.reco p{color:rgba(247,243,234,.75);max-width:640px;margin:0 auto;font-size:15px}
+</style>
+</head>
+<body>
+
+<div class="head wrap">
+  <div class="mono">Seathera · Direction artistique</div>
+  <h1>Quatre bleus de Méditerranée</h1>
+  <p>Même page, même contenu — seule la charte change. Le plus parlant : ouvrir la <a href="index.html" style="border-bottom:1px solid #C2A265;color:inherit;text-decoration:none">homepage</a> et basculer entre les chartes avec le sélecteur en bas d'écran.</p>
+</div>
+
+<div class="wrap">
+
+  <!-- ABYSSE -->
+  <section class="charte">
+    <div class="charte-head"><h2>01 · Abysse</h2><span class="badge">Proposition initiale</span></div>
+    <div class="swatches">
+      <div class="sw" style="background:#071C2B">#071C2B</div>
+      <div class="sw" style="background:#0C3247">#0C3247</div>
+      <div class="sw" style="background:#1F5F86">#1F5F86</div>
+      <div class="sw light" style="background:#F7F3EA">#F7F3EA</div>
+      <div class="sw light" style="background:#C2A265">#C2A265</div>
+    </div>
+    <div class="charte-body">
+      <div class="mini" style="background:#071C2B;color:#F7F3EA">
+        <div class="mono" style="color:#D8BE8C">La profondeur</div>
+        <h3>Inspiré par la nature, formulé par la science.</h3>
+        <div class="btns"><span class="b" style="background:#C2A265;border-color:#C2A265;color:#071C2B">Découvrir</span><span class="b" style="color:#F7F3EA;border-color:#F7F3EA">La science</span></div>
+      </div>
+      <div class="mini" style="background:#F7F3EA;color:#12222E">
+        <div class="mono" style="color:#C2A265">Sur fond clair</div>
+        <h3>Les héros de votre routine</h3>
+        <p style="font-size:13.5px;color:#5C6B76">Écume chaude, or antique, encre profonde.</p>
+      </div>
+    </div>
+    <div class="verdict">
+      <p><b>La mer au large, la nuit tombée.</b> C'est la charte la plus luxe et la plus crédible scientifiquement — le bloc science y est le plus percutant. C'est le langage des grandes maisons (La Mer, Augustinus Bader).</p>
+      <p>Risque : moins « solaire », moins évocateur des vacances méditerranéennes.</p>
+      <a class="voir" href="index.html">Voir la homepage en Abysse →</a>
+    </div>
+  </section>
+
+  <!-- EGEE -->
+  <section class="charte">
+    <div class="charte-head"><h2>02 · Égée</h2><span class="badge">Le compromis</span></div>
+    <div class="swatches">
+      <div class="sw" style="background:#0A2E45">#0A2E45</div>
+      <div class="sw" style="background:#145072">#145072</div>
+      <div class="sw" style="background:#2E86B8">#2E86B8</div>
+      <div class="sw light" style="background:#F6F5EF">#F6F5EF</div>
+      <div class="sw light" style="background:#C2A265">#C2A265</div>
+    </div>
+    <div class="charte-body">
+      <div class="mini" style="background:#0A2E45;color:#F6F5EF">
+        <div class="mono" style="color:#D8BE8C">La profondeur</div>
+        <h3>Inspiré par la nature, formulé par la science.</h3>
+        <div class="btns"><span class="b" style="background:#C2A265;border-color:#C2A265;color:#0A2E45">Découvrir</span><span class="b" style="color:#F6F5EF;border-color:#F6F5EF">La science</span></div>
+      </div>
+      <div class="mini" style="background:#F6F5EF;color:#12303F">
+        <div class="mono" style="color:#C2A265">Sur fond clair</div>
+        <h3>Les héros de votre routine</h3>
+        <p style="font-size:13.5px;color:#587082">Bleu plus franc et lumineux, fonds chauds conservés.</p>
+      </div>
+    </div>
+    <div class="verdict">
+      <p><b>La mer Égée en fin d'après-midi.</b> Plus lumineux qu'Abysse, le bleu devient plus visible et plus « méditerranéen », sans perdre le sérieux du bloc science ni le contraste avec l'or.</p>
+      <p>Le meilleur équilibre si Abysse paraît trop sombre au patron.</p>
+      <a class="voir" href="index.html?charte=egee">Voir la homepage en Égée →</a>
+    </div>
+  </section>
+
+  <!-- SANTORIN -->
+  <section class="charte">
+    <div class="charte-head"><h2>03 · Santorin</h2><span class="badge">Le bleu clair</span></div>
+    <div class="swatches">
+      <div class="sw" style="background:#155A80">#155A80</div>
+      <div class="sw" style="background:#2272A0">#2272A0</div>
+      <div class="sw" style="background:#5FA8CE">#5FA8CE</div>
+      <div class="sw light" style="background:#FAFCFD">#FAFCFD</div>
+      <div class="sw light" style="background:#C2A265">#C2A265</div>
+    </div>
+    <div class="charte-body">
+      <div class="mini" style="background:#155A80;color:#FAFCFD">
+        <div class="mono" style="color:#D8BE8C">La profondeur</div>
+        <h3>Inspiré par la nature, formulé par la science.</h3>
+        <div class="btns"><span class="b" style="background:#C2A265;border-color:#C2A265;color:#155A80">Découvrir</span><span class="b" style="color:#FAFCFD;border-color:#FAFCFD">La science</span></div>
+      </div>
+      <div class="mini" style="background:#FAFCFD;color:#173A4D">
+        <div class="mono" style="color:#C2A265">Sur fond clair</div>
+        <h3>Les héros de votre routine</h3>
+        <p style="font-size:13.5px;color:#5E7A8A">Blanc des Cyclades, ciel clair, ombres bleutées.</p>
+      </div>
+    </div>
+    <div class="verdict">
+      <p><b>Midi sur les Cyclades.</b> C'est la vision du patron : un bleu clair et solaire, très frais, très « vacances ». La page respire, l'ambiance est immédiatement balnéaire.</p>
+      <p>Points de vigilance : les bleus clairs sont le territoire des marques thalasso/pharmacie (moins premium), et le bloc science perd de sa force — l'esprit laboratoire s'estompe. L'or ressort moins sur ciel clair.</p>
+      <a class="voir" href="index.html?charte=santorin">Voir la homepage en Santorin →</a>
+    </div>
+  </section>
+
+  <!-- LAGON -->
+  <section class="charte">
+    <div class="charte-head"><h2>04 · Lagon</h2><span class="badge">L'alternative</span></div>
+    <div class="swatches">
+      <div class="sw" style="background:#0A3A42">#0A3A42</div>
+      <div class="sw" style="background:#11565F">#11565F</div>
+      <div class="sw" style="background:#2E8C96">#2E8C96</div>
+      <div class="sw light" style="background:#F6F6F0">#F6F6F0</div>
+      <div class="sw light" style="background:#C2A265">#C2A265</div>
+    </div>
+    <div class="charte-body">
+      <div class="mini" style="background:#0A3A42;color:#F6F6F0">
+        <div class="mono" style="color:#D8BE8C">La profondeur</div>
+        <h3>Inspiré par la nature, formulé par la science.</h3>
+        <div class="btns"><span class="b" style="background:#C2A265;border-color:#C2A265;color:#0A3A42">Découvrir</span><span class="b" style="color:#F6F6F0;border-color:#F6F6F0">La science</span></div>
+      </div>
+      <div class="mini" style="background:#F6F6F0;color:#10333A">
+        <div class="mono" style="color:#C2A265">Sur fond clair</div>
+        <h3>Les héros de votre routine</h3>
+        <p style="font-size:13.5px;color:#57727A">Bleu-vert profond, entre eau peu profonde et olivier.</p>
+      </div>
+    </div>
+    <div class="verdict">
+      <p><b>L'eau translucide d'une crique.</b> Le bleu-vert fait le pont entre la mer et l'olivier — très identitaire, personne ne l'occupe dans le secteur. Reste profond donc premium.</p>
+      <p>Risque : tire vers l'univers spa/bien-être tropical si on force le turquoise.</p>
+      <a class="voir" href="index.html?charte=lagon">Voir la homepage en Lagon →</a>
+    </div>
+  </section>
+
+  <div class="reco">
+    <div class="mono">Recommandation studio</div>
+    <h2>Ce n'est pas l'un ou l'autre</h2>
+    <p>La Méditerranée du patron (bleu clair, lumière) peut vivre dans les <b>photos, les fonds clairs et les respirations</b> de la page, pendant qu'un bleu profond reste réservé au <b>bloc science et aux moments premium</b>. C'est exactement ce que fait Égée : la lumière en surface, la profondeur là où la crédibilité se joue. Comparez Abysse et Égée sur téléphone avant de trancher.</p>
+  </div>
+
+</div>
+</body>
+</html>
