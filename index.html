@@ -8,48 +8,23 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Jost:ital,wght@0,300;0,400;0,500;1,300&family=IBM+Plex+Mono:wght@300;400&display=swap" rel="stylesheet">
 <style>
+/* ===== CHARTE SANTORIN — retenue le 11/08/2026 ===== */
 :root{
-  --abysse:#071C2B;
-  --marine:#0C3247;
-  --egee:#1F5F86;
-  --ecume:#F7F3EA;
-  --ecume-2:#F1EADC;
-  --sable:#E5D9C0;
+  --abysse:#155A80;
+  --marine:#2272A0;
+  --egee:#5FA8CE;
+  --ecume:#FAFCFD;
+  --ecume-2:#EEF5F8;
+  --sable:#DCEAF1;
   --or:#C2A265;
   --or-clair:#D8BE8C;
   --olive:#757E4E;
-  --encre:#12222E;
-  --gris:#5C6B76;
+  --encre:#173A4D;
+  --gris:#5E7A8A;
   --serif:'Marcellus',serif;
   --sans:'Jost',sans-serif;
   --mono:'IBM Plex Mono',monospace;
 }
-/* ===== CHARTES — variantes de bleu (démo) ===== */
-/* Égée — l'intermédiaire lumineux : bleu franc, fonds chauds conservés */
-body[data-charte="egee"]{
-  --abysse:#0A2E45; --marine:#145072; --egee:#2E86B8;
-  --ecume:#F6F5EF; --ecume-2:#EDEBDF; --sable:#E3D8BE;
-  --encre:#12303F; --gris:#587082;
-}
-/* Santorin — le bleu clair du patron : ciel, blanc des Cyclades */
-body[data-charte="santorin"]{
-  --abysse:#155A80; --marine:#2272A0; --egee:#5FA8CE;
-  --ecume:#FAFCFD; --ecume-2:#EEF5F8; --sable:#DCEAF1;
-  --encre:#173A4D; --gris:#5E7A8A;
-}
-/* Lagon — l'eau peu profonde : bleu-vert méditerranéen */
-body[data-charte="lagon"]{
-  --abysse:#0A3A42; --marine:#11565F; --egee:#2E8C96;
-  --ecume:#F6F6F0; --ecume-2:#EBEEE4; --sable:#E0DcC2;
-  --encre:#10333A; --gris:#57727A;
-}
-/* sélecteur de charte */
-.charte-bar{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);z-index:200;display:flex;gap:4px;background:color-mix(in srgb, var(--abysse) 92%, transparent);backdrop-filter:blur(10px);padding:6px;border:1px solid color-mix(in srgb, var(--or-clair) 35%, transparent);border-radius:40px;box-shadow:0 12px 40px -12px rgba(0,0,0,.5)}
-.charte-bar button{display:flex;align-items:center;gap:8px;border:0;background:transparent;color:color-mix(in srgb, var(--ecume) 65%, transparent);font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;padding:9px 14px;border-radius:30px;cursor:pointer;transition:.3s;white-space:nowrap}
-.charte-bar button .dot{width:13px;height:13px;border-radius:50%;border:1px solid rgba(255,255,255,.5);flex:none}
-.charte-bar button.on{background:var(--or);color:var(--abysse)}
-.charte-bar button.on .dot{border-color:var(--abysse)}
-@media(max-width:560px){.charte-bar{bottom:12px;max-width:calc(100vw - 16px);overflow-x:auto}.charte-bar button{padding:9px 10px}}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:var(--sans);color:var(--encre);background:var(--ecume);font-weight:300;line-height:1.6;-webkit-font-smoothing:antialiased}
@@ -693,30 +668,11 @@ footer.site{background:color-mix(in srgb, var(--abysse) 72%, black);color:color-
   </div>
 </footer>
 
-<div class="charte-bar" role="group" aria-label="Choix de la charte couleur">
-  <button data-c="" ><span class="dot" style="background:#071C2B"></span>Abysse</button>
-  <button data-c="egee"><span class="dot" style="background:#2E86B8"></span>Égée</button>
-  <button data-c="santorin"><span class="dot" style="background:#5FA8CE"></span>Santorin</button>
-  <button data-c="lagon"><span class="dot" style="background:#2E8C96"></span>Lagon</button>
-</div>
-
 <script>
 const io = new IntersectionObserver(es => {
   es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } });
 }, { threshold: .12 });
 document.querySelectorAll('.rv:not(.on)').forEach(el => io.observe(el));
-
-// sélecteur de charte
-const bar = document.querySelector('.charte-bar');
-function setCharte(c){
-  if(c) document.body.dataset.charte = c; else delete document.body.dataset.charte;
-  bar.querySelectorAll('button').forEach(b => b.classList.toggle('on', b.dataset.c === c));
-}
-bar.addEventListener('click', e => {
-  const b = e.target.closest('button');
-  if(b) setCharte(b.dataset.c);
-});
-setCharte(new URLSearchParams(location.search).get('charte') || '');
 </script>
 </body>
 </html>
